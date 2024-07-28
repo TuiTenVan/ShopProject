@@ -1,0 +1,116 @@
+/* SliderComponent.css */
+
+.custom-carousel .slick-slider {
+    position: relative;
+}
+
+.custom-carousel .slick-prev, .custom-carousel .slick-next {
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.custom-carousel .slick-prev {
+    left: 20px;
+}
+
+.custom-carousel .slick-next {
+    right: 20px;
+}
+
+.custom-carousel .slick-prev:hover, .custom-carousel .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.slider-img {
+    position: relative;
+    height: 500px; /* Điều chỉnh chiều cao của ảnh */
+    background-size: cover;
+    background-position: center;
+}
+
+.slider_content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-align: left;
+    opacity: 1;
+    transform: translateY(10px); /* Dịch chuyển lên 10px để ẩn nội dung */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition để hiển thị mượt mà */
+}
+
+.slider_content.show {
+    opacity: 1;
+    transform: translateY(0); /* Trở về vị trí ban đầu */
+}
+
+
+.slider-img-content {
+    max-width: 100%; /* Đảm bảo hình ảnh không bị vượt quá kích thước của slider */
+}
+
+.slider-text {
+    font-size: 24px; /* Kích thước chữ */
+    margin-top: 10px; /* Khoảng cách giữa các dòng chữ */
+}
+
+.slider-link {
+    display: inline-block;
+    margin-top: 15px; /* Khoảng cách giữa chữ và nút Discover Now */
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.slider-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+.single_blog {
+    padding: 15px; /* Điều chỉnh khoảng cách giữa các mục blog */
+}
+
+.blog_wrapper .slick-list {
+    padding-right: 25px; /* Để đảm bảo không bị cắt các mục cuối */
+}
+.blog_icon a {
+    color: #fff; /* Màu chữ */
+    text-decoration: none; /* Không gạch chân */
+    font-size: 18px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+    opacity: 0; /* Ẩn nút ban đầu */
+    transition: opacity 0.1s ease; /* Hiệu ứng khi thay đổi opacity */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(44, 43, 43, 0.5); /* Màu nền */
+    padding: 10px 20px; /* Độ lớn của nút */
+    border-radius: 5px; /* Bo góc */
+}
+
+.blog_thumb:hover a {
+    opacity: 1; 
+}
+
+.only{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+

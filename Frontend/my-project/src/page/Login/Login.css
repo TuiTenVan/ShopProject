@@ -1,0 +1,34 @@
+.login_heading {
+    text-align: center;
+    /* Căn giữa chữ "Login" */
+}
+.btn_login:hover{
+    color: #fff;
+}
+.here:hover {
+    color: #FF9728!important;
+}
+
+.register_link{
+    margin-top: 10px;
+    text-align: center;
+}
+.title_login {
+    text-align: center;
+} 
+/* src/Login.css */
+.google_login {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .google_login p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .google_login button {
+    display: block;
+    width: 100%;
+  }
+  

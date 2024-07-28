@@ -1,0 +1,19 @@
+.register_heading {
+    text-align: center;
+}
+
+.login_link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login_here:hover{
+    color: orange;
+}
+
+.btn_register:hover {
+    color: #fff;
+}
+a {
+    text-decoration: none !important;
+}

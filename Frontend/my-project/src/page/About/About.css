@@ -1,0 +1,23 @@
+
+.about_prog {
+  visibility: visible;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+      opacity: 1;
+      transform: none;
+  }
+}
+.counter_number_large {
+  font-size: 26px;
+  font-weight: bold; 
+  color: #333; 
+}
