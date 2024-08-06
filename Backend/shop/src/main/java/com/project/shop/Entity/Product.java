@@ -25,6 +25,8 @@ public class Product extends BaseEntity {
 
     private String type;
 
+    private Integer quantity;
+
     @Column(nullable = false)
     private Integer price;
 

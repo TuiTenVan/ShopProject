@@ -29,6 +29,7 @@ public class JwtTokenUtil {
         Map<String, Object> claims = new HashMap<>();
         claims.put("phoneNumber", user.getPhoneNumber());
         claims.put("userId", user.getUserID());
+        claims.put("role", user.getRole().getRoleName());
         try {
             String token = Jwts.builder()
                     .setClaims(claims)
@@ -74,6 +75,11 @@ public class JwtTokenUtil {
 
     public String extractPhoneNumber(String token) {
         return extractClaim(token, Claims::getSubject);
+    }
+
+    public String extractRole(String token) throws Exception {
+        Claims claims = extractAllClaims(token);
+        return claims.get("role", String.class);
     }
 
     public boolean validateToken(String token, UserDetails userDetails) {

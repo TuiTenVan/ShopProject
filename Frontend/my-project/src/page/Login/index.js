@@ -1,9 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { Form, Input, Button, Divider, message } from 'antd';
+import { login } from '../../services/AuthService'; 
 import './Login.css';
 
-function Login() {
+const Login = () => {
+  const [form] = Form.useForm();
+  const navigate = useNavigate();
+
+  const handleFinish = async (values) => {
+    try {
+      const response = await login(values.phoneNumber, values.password);
+      // console.log('Login successful:', response);
+      // console.log(response)
+      if(response.token === null) {
+        message.error('Phone number or password incorrect');
+      }
+      else{
+        if(response.role === 'USER') {
+          navigate('/');
+        }
+        else if(response.role === 'ADMIN') {
+          navigate('/admin');
+        }
+        message.success("Login successful")
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+
+  const handleGoogleLoginSuccess = (credentialResponse) => {
+    console.log('Google login successful:', credentialResponse);
+  };
+
+  const handleGoogleLoginError = () => {
+    console.log('Google login failed');
+  };
 
   return (
     <>
@@ -29,33 +63,49 @@ function Login() {
             <div className="col-lg-6 col-md-8 mx-auto">
               <div className="account_form">
                 <h2 className='title_login'>Login</h2>
-                <form action="#">
-                  <div className="form_group">
-                    <label>Username or email <span>*</span></label>
-                    <input type="text" className="form_control" />
-                  </div>
-                  <div className="form_group">
-                    <label>Password <span>*</span></label>
-                    <input type="password" className="form_control" />
-                  </div>
-                  <div className="login_submit">
-                    <a href="#">Lost your password?</a>
-                    <button type="submit" className="btn_login">Login</button>
-                  </div>
-                </form>
-                <h5 className='register_link'>Don't have an account? <Link to="/register"><span className='here'>Register here</span></Link></h5>
+                <Form
+                  form={form}
+                  onFinish={handleFinish}
+                  layout="vertical"
+                >
+                  <Form.Item
+                    label="Phone Number"
+                    name="phoneNumber"
+                    rules={[{ required: true, message: 'Please input your phone number!' }]}
+                  >
+                    <Input />
+                  </Form.Item>
+
+                  <Form.Item
+                    label="Password"
+                    name="password"
+                    rules={[{ required: true, message: 'Please input your password!' }]}
+                  >
+                    <Input.Password />
+                  </Form.Item>
+
+                  <Form.Item>
+                    <Button type="primary" htmlType="submit" className="btn_login">
+                      Login
+                    </Button>
+                    {/* <a href="#" className="forgot_password">Lost your password?</a> */}
+                  </Form.Item>
+                </Form>
+
+                <h5 className='register_link'>
+                  Don't have an account? <Link to="/register"><span className='here'>Register here</span></Link>
+                </h5>
+
+                <Divider>Or login with:</Divider>
 
                 <div className="google_login">
-                  <p>Or login with:</p>
-                  <GoogleLogin
-                    onSuccess={credentialResponse => {
-                      console.log(credentialResponse);
-                    }}
-                    onError={() => {
-                      console.log('Login Failed');
-                    }}
-                  />
-                </div>
+                  <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+                    <GoogleLogin
+                      onSuccess={handleGoogleLoginSuccess}
+                      onError={handleGoogleLoginError}
+                    />
+                  </GoogleOAuthProvider>
+                </div> 
               </div>
             </div>
           </div>
@@ -63,6 +113,6 @@ function Login() {
       </div>
     </>
   );
-}
+};
 
 export default Login;

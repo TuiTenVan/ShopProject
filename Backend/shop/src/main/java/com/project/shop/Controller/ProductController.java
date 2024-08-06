@@ -1,5 +1,4 @@
 package com.project.shop.Controller;
-
 import com.project.shop.Model.ProductDTO;
 import com.project.shop.Service.IProductService;
 import com.project.shop.Service.Impl.CloudinaryService;
@@ -64,7 +63,7 @@ public class ProductController {
     }
     @PostMapping("/upload/{productId}")
     public ResponseEntity<List<Map>> uploadImages(@RequestParam("images") MultipartFile[] files, @PathVariable("productId") Long productId) throws IOException {
-        List<Map> result = cloudinaryService.uploadFiles(files, productId);
+        List<Map> result = cloudinaryService.uploadFilesProduct(files, productId);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

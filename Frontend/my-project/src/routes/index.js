@@ -1,21 +1,28 @@
+import LayoutAdmin from "../components/Layout/LayoutAdmin";
 import LayoutDefault from "../components/Layout/LayoutDefault";
+import PrivateRoutes from "../components/PrivateRoutes";
 import About from "../page/About";
 import Blogs from "../page/Blog";
 import BlogDetail from "../page/BlogDetail";
 import Cart from "../page/Cart";
 import Contact from "../page/Contact";
+import Dashboard from "../page/Dashboard";
 import Home from "../page/Home";
 import Login from "../page/Login";
 import ProductDetail from "../page/ProductDetail";
 import Register from "../page/Register";
 import Shop from "../page/Shop";
-
+import UserManager from "../page/UserManager/UserManager";
+import CreateUser from "../page/UserManager/CreateUser";
+import ProductManager from "../page/ProductManager/ProductManager";
+import ProductDetailAdmin from "../page/ProductManager/ProductDetailAdmin";
+import CreateProduct from "../page/ProductManager/CreateProduct";
 
 export const routes = [
   // Public
   {
     path: "/",
-    element: <LayoutDefault/>,
+    element: <LayoutDefault />,
     children: [
       {
         index: true,
@@ -27,77 +34,72 @@ export const routes = [
       },
       {
         path: "contact",
-        element: <Contact/>
+        element: <Contact />
       },
       {
-        path: "login",     
-        element: <Login/>
+        path: "login",
+        element: <Login />
       },
       {
         path: "register",
-        element: <Register/>
+        element: <Register />
       },
       {
         path: "cart",
-        element: <Cart/>
+        element: <Cart />
       },
       {
         path: "shop",
-        element: <Shop/>
+        element: <Shop />
       },
       {
         path: "product-detail",
-        element: <ProductDetail/>
+        element: <ProductDetail />
       },
       {
         path: "blogs",
-        element: <Blogs/>
+        element: <Blogs />
       },
       {
         path: "blog-details",
-        element: <BlogDetail/>
-      }
-    ]
-  
+        element: <BlogDetail />
+      },
+    ],
   },
 
-  //Route Private
-  // {
-  //   element: <PrivateRoutes />,
-  //   children: [
-  //     {
-  //       element: <LayoutAdmin />,
-  //       children: [
-  //         {
-  //           path: "admin",
-  //           element: <Dashboard />,
-  //         },
-  //         {
-  //           path: "info-company",
-  //           element: <InfoCompany />,
-  //         },
-  //         {
-  //           path: "job-manage",
-  //           element: <JobManage />,
-  //         },
-  //         {
-  //           path: "create-job",
-  //           element: <CreateJob />,
-  //         },
-  //         {
-  //           path: "detail-job/:id",
-  //           element: <JobDetailAdmin />,
-  //         },
-  //         {
-  //           path: "cv-manage",
-  //           element: <CVManage />,
-  //         },
-  //         {
-  //           path: "detail-cv/:id",
-  //           element: <CVDetail />,
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  // Admin routes
+  {
+    element: <PrivateRoutes />,
+    children: [
+      {
+        element: <LayoutAdmin />,
+        children: [
+          {
+            path: "admin",
+            element: <Dashboard />,
+          },
+          {
+            path: "user-manager",     
+            element: <UserManager/>
+          },
+          {
+            path: "create-user",
+            element: <CreateUser/>
+          },
+          {
+            path: "product-manager",
+            element: <ProductManager/>
+          },
+          {
+            path: "product-detail-admin/:id",
+            element: <ProductDetailAdmin />
+          },
+          {
+            path: "create-product",
+            element: <CreateProduct/>
+          }
+        ],
+      },
+    ],
+  },
 ];

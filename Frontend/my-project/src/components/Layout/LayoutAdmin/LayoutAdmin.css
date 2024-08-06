@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+.layout-admin__header {
+  display: flex;
+  background: #242424;
+  border-bottom: 1px solid #edf2f9;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.layout-admin__logo {
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #edf2f9;
+  transition: all 0.2s;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.layout-admin__logo a {
+  color: #ffffffb9;
+}
+
+.layout-admin__logo--fold {
+  width: 80px;
+}
+
+.layout-admin__account button {
+  margin-right: 15px;
+}
+
+.layout-admin__nav {
+  flex: 1;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.layout-admin__icon-collapse {
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffffb9;
+}
+
+.layout-admin__main {
+  margin-left: 230px;
+  transition: all 0.2s;
+}
+
+.layout-admin__main--fold {
+  margin-left: 80px;
+}
+
+.layout-admin__sider {
+  border-right: 1px solid #edf2f9;
+  position: fixed !important;
+  height: calc(100vh - 70px);
+  left: 0;
+  top: 70px;
+}
+
+.layout-admin__search {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.layout-admin__content {
+  background: #fafafa;
+  padding: 25px;
+}

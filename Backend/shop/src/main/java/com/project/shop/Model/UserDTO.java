@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UserDTO {
+    private Long userId;
+    private String avatar;
     private String phoneNumber;
     private String email;
     private String password;
@@ -17,4 +19,6 @@ public class UserDTO {
     private String address;
     private String gender;
     private String birthDate;
+    private String role;
+    private boolean active;
 }

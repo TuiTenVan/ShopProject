@@ -3,7 +3,8 @@
     /* Căn giữa chữ "Login" */
 }
 .btn_login:hover{
-    color: #fff;
+    color: #fff!important;
+    background-color: #000!important;
 }
 .here:hover {
     color: #FF9728!important;

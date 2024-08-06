@@ -43,7 +43,7 @@ function Cart() {
                                                     <td className="product_thumb"><a href="#"><img src="/img/s-product/product.jpg" alt="" /></a></td>
                                                     <td className="product_name"><a href="#">Handbag fringilla</a></td>
                                                     <td className="product-price">£65.00</td>
-                                                    <td className="product_quantity"><input min="1" max="100" value="1" type="number" /></td>
+                                                    <td className="product_quantity"><input min="1" max="100" type="number" /></td>
                                                     <td className="product_total">£130.00</td>
                                                 </tr>
                                                 <tr>
@@ -51,7 +51,7 @@ function Cart() {
                                                     <td className="product_thumb"><a href="#"><img src="/img/s-product/product2.jpg" alt="" /></a></td>
                                                     <td className="product_name"><a href="#">Handbags justo</a></td>
                                                     <td className="product-price">£90.00</td>
-                                                    <td className="product_quantity"><input min="1" max="100" value="1" type="number" /></td>
+                                                    <td className="product_quantity"><input min="1" max="100" type="number" /></td>
                                                     <td className="product_total">£180.00</td>
 
 
@@ -61,7 +61,7 @@ function Cart() {
                                                     <td className="product_thumb"><a href="#"><img src="/img/s-product/product3.jpg" alt="" /></a></td>
                                                     <td className="product_name"><a href="#">Handbag elit</a></td>
                                                     <td className="product-price">£80.00</td>
-                                                    <td className="product_quantity"><input min="1" max="100" value="1" type="number" /></td>
+                                                    <td className="product_quantity"><input min="1" max="100" type="number" /></td>
                                                     <td className="product_total">£160.00</td>
                                                 </tr>
                                             </tbody>

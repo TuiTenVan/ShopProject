@@ -53,7 +53,7 @@ function ProductDetail() {
                                         <p>More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go. Cover Flow. Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list. Enhanced interface. Experience Link whole new way to browse and view your music and video. Sleeker design. Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polish.. </p>
                                     </div>
                                     <div className="product_variant color">
-                                        <h3>color</h3>
+                                        <h3>color</h3>  
                                         <Select defaultValue="choose in option" style={{ width: 180 }}>
                                             <Option value="choose in option">Choose in option</Option>
                                             <Option value="choose in option2">Choose in option2</Option>

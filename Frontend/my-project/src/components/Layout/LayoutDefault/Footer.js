@@ -63,7 +63,7 @@ function Footer(){
                                     <p>Exceptional quality. Ethical factories. Sign up to enjoy free U.S. shipping and returns on your first order.</p>
                                     <div className="subscribe_form">
                                         <form id="mc-form" className="mc-form footer-newsletter" >
-                                            <input id="mc-email" type="email" autocomplete="off" placeholder="Enter you email address here..." />
+                                            <input id="mc-email" type="email" autoComplete="off" placeholder="Enter you email address here..." />
                                             <button id="mc-submit">Subscribe !</button>
                                         </form>
                                  

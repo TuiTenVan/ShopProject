@@ -1,22 +1,24 @@
 import "../../components/Css/plugins.css"
 import "../../components/Css/style.css"
-import { Carousel } from 'antd';
+import { Carousel, Select } from 'antd';
 import "./Home.css"
 import ProductSlider from "./ProductSlider";
 import BlogCarousel from "./BlogCarousel";
 import ProductCarousel from "./ProductCarousel";
 import { Link } from "react-router-dom";
 
+const { Option } = Select;
+
 function Home() {
     return (
         <>
-            <div class="slider_area slider_style home_three_slider">
+            <div className="slider_area slider_style home_three_slider">
                 <Carousel autoplay>
                     <div>
                         <div className="single_slider" style={{ backgroundImage: `url("/img/slider/slider4.jpg")` }}>
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
+                            <div className="container">
+                                <div className="row align-items-center">
+                                    <div className="col-12">
                                         <div className="slider_content content_one">
                                             <img src="/img/slider/content3.png" alt="123" />
                                             <p>the wooboom clothing summer collection is back at half price</p>
@@ -29,9 +31,9 @@ function Home() {
                     </div>
                     <div>
                         <div className="single_slider" style={{ backgroundImage: `url("/img/slider/slider5.jpg")` }}>
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
+                            <div className="container">
+                                <div className="row align-items-center">
+                                    <div className="col-12">
                                         <div className="slider_content content_two">
                                             <img src="/img/slider/content4.png" alt="" />
                                             <p>the wooboom clothing summer collection is back at half price</p>
@@ -44,9 +46,9 @@ function Home() {
                     </div>
                     <div>
                         <div className="single_slider" style={{ backgroundImage: `url("/img/slider/slider6.jpg")` }}>
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
+                            <div className="container">
+                                <div className="row align-items-center">
+                                    <div className="col-12">
                                     <div className="slider_content content_three">
                                         <img src="/img/slider/content5.png" alt="" />
                                         <p>the wooboom clothing summer collection is back at half price</p>
@@ -789,7 +791,7 @@ function Home() {
                     <BlogCarousel/>
                 </div>
             </section>
-            <div className="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+            <div className="modal fade" id="modal_box" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
@@ -864,27 +866,27 @@ function Home() {
                                             <div className="variants_selects">
                                                 <div className="variants_size">
                                                     <h2>size</h2>
-                                                    <select className="select_option">
-                                                        <option selected value="1">s</option>
-                                                        <option value="1">m</option>
-                                                        <option value="1">l</option>
-                                                        <option value="1">xl</option>
-                                                        <option value="1">xxl</option>
-                                                    </select>
+                                                    <Select className="select_option" defaultValue="Choose size">
+                                                        <Option selected value="1">s</Option>
+                                                        <Option value="1">m</Option>
+                                                        <Option value="1">l</Option>
+                                                        <Option value="1">xl</Option>
+                                                        <Option value="1">xxl</Option>
+                                                    </Select>
                                                 </div>
                                                 <div className="variants_color">
                                                     <h2>color</h2>
-                                                    <select className="select_option">
-                                                        <option selected value="1">purple</option>
-                                                        <option value="1">violet</option>
-                                                        <option value="1">black</option>
-                                                        <option value="1">pink</option>
-                                                        <option value="1">orange</option>
-                                                    </select>
+                                                    <Select className="select_option">
+                                                        <Option selected value="1">purple</Option>
+                                                        <Option value="1">violet</Option>
+                                                        <Option value="1">black</Option>
+                                                        <Option value="1">pink</Option>
+                                                        <Option value="1">orange</Option>
+                                                    </Select>
                                                 </div>
                                                 <div className="modal_add_to_cart">
                                                     <form action="#">
-                                                        <input min="0" max="100" step="2" value="1" type="number" />
+                                                        <input min="0" max="100" step="2" type="number" />
                                                         <button type="submit">add to cart</button>
                                                     </form>
                                                 </div>

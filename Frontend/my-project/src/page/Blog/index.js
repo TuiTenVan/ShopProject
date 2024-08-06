@@ -217,7 +217,7 @@ function Blogs(){
                         <div className="blog_grid video">
                             <div className="blog_thumb embed-responsive embed-responsive-16by9">
                                     
-                                <iframe  height="700" src="https://www.youtube.com/embed/2Zt8va_6HRk"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe  height="700" src="https://www.youtube.com/embed/2Zt8va_6HRk"  allow="autoplay; encrypted-media" allowFullScreen></iframe>
                             </div>
                             <div className="blog_content">
                                 <div className="post_date">

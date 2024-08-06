@@ -2,14 +2,12 @@ package com.project.shop.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,13 +21,15 @@ public class User extends BaseEntity implements UserDetails  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userID;
 
-    @Column(unique = true, nullable = false)
+    private String avatar;
+
+    @Column(nullable = false)
     private String fullName;
 
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 
-    @Column(nullable = false)
+    @Column
     private String password;
 
     @Column(nullable = false)
@@ -44,6 +44,7 @@ public class User extends BaseEntity implements UserDetails  {
     @Column(unique = true, nullable = false)
     private String email;
 
+    private boolean isActive;
     @ManyToOne
     @JoinColumn(name = "roleID", nullable = false)
     private Role role;

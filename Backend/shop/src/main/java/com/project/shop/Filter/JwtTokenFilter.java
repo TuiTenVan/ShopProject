@@ -61,13 +61,15 @@ public class JwtTokenFilter extends OncePerRequestFilter{
             filterChain.doFilter(request, response);
         }
         catch (Exception e) {
+            e.printStackTrace();
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
         }
     }
     private boolean isBypassToken(@NonNull HttpServletRequest request) {
         final List<Pair<String, String>> bypassTokens = Arrays.asList(
                 Pair.of("/login", "POST"),
-                Pair.of("/register", "POST")
+                Pair.of("/register", "POST"),
+                Pair.of("/", "GET")
         );
         String requestPath = request.getServletPath();
         String requestMethod = request.getMethod();

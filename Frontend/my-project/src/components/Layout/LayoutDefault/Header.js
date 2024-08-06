@@ -1,7 +1,9 @@
+import { Select } from 'antd';
 import React, { useState, useEffect, useRef } from 'react';
 import { IoChevronDownOutline, IoSearchOutline, IoCartOutline, IoCloseSharp, IoMenuOutline } from "react-icons/io5";
 
 import { Link } from "react-router-dom"
+const { Option } = Select;
 
 function Header() {
     const [isSticky, setIsSticky] = useState(false);
@@ -65,7 +67,7 @@ function Header() {
                                     <li><a href="wishlist.html">My Wish List </a></li>
                                     <li><a href="my-account.html">My Account </a></li>
                                     <li><Link to={"/login"}>Sign In</Link></li>
-                                    <li><a href="compare.html">Compare Products  </a></li>
+                                    <li><Link to={"/register"}>Sign Up</Link></li>
                                 </ul>
                             </li>
                             <li className="language"><a href="compare.html"><img src="assets/img/logo/language.png" alt="" /> English <i className="ion-chevron-down"></i></a>
@@ -84,19 +86,19 @@ function Header() {
                     </div>
                     <div className="search_bar">
                         <form action="#">
-                            <select className="select_option" name="select" id="categori">
-                                <option selected value="1">All Categories</option>
-                                <option value="2">Accessories</option>
-                                <option value="3">Bridge</option>
-                                <option value="4">Hub</option>
-                                <option value="5">Repeater</option>
-                                <option value="6">Switch</option>
-                                <option value="7">Video Games</option>
-                                <option value="8">PlayStation 3</option>
-                                <option value="9">PlayStation 4</option>
-                                <option value="10">Xbox 360</option>
-                                <option value="11">Xbox One</option>
-                            </select>
+                            <Select className="select_option" name="select" id="categori">
+                                <Option selected value="1">All Categories</Option>
+                                <Option value="2">Accessories</Option>
+                                <Option value="3">Bridge</Option>
+                                <Option value="4">Hub</Option>
+                                <Option value="5">Repeater</Option>
+                                <Option value="6">Switch</Option>
+                                <Option value="7">Video Games</Option>
+                                <Option value="8">PlayStation 3</Option>
+                                <Option value="9">PlayStation 4</Option>
+                                <Option value="10">Xbox 360</Option>
+                                <Option value="11">Xbox One</Option>
+                            </Select>
                             <input placeholder="Search entire store here..." type="text" />
                             <button type="submit"><IoSearchOutline /></button>
                         </form>
@@ -225,14 +227,14 @@ function Header() {
                             <li className="menu-item-has-children">
                                 <a href="#">pages </a>
                                 <ul className="sub-menu">
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><Link to={"/about"}>About Us</Link></li>
                                     <li><a href="services.html">services</a></li>
                                     <li><a href="faq.html">Frequently Questions</a></li>
-                                    <li><a href="contact.html">contact</a></li>
-                                    <li><a href="login.html">login</a></li>
+                                    <li><Link to={"/contact"}>contact</Link></li>
+                                    <li><Link to={"/login"}>sign in</Link></li>
                                     <li><a href="wishlist.html">Wishlist</a></li>
                                     <li><a href="404.html">Error 404</a></li>
-                                    <li><a href="compare.html">compare</a></li>
+                                    <li><Link to={"/register"}>sign up</Link></li>
                                     <li><a href="privacy-policy.html">privacy policy</a></li>
                                     <li><a href="coming-soon.html">coming soon</a></li>
                                 </ul>
@@ -283,7 +285,7 @@ function Header() {
                                                 <li><a href="wishlist.html">My Wish List</a></li>
                                                 <li><a href="my-account.html">My Account</a></li>
                                                 <li><Link to={"/login"}>Sign In</Link></li>
-                                                <li><a href="compare.html">Compare Products</a></li>
+                                                <li><Link to={"/register"}>Sign Up</Link></li>
                                             </ul>
                                         </li>
                                     </ul>

@@ -1,7 +1,9 @@
 .register_heading {
     text-align: center;
 }
-
+/* .ant-form-item-control-input-content{
+    text-align: center!important;
+} */
 .login_link {
     text-align: center;
     margin-top: 20px;
@@ -12,7 +14,8 @@
 }
 
 .btn_register:hover {
-    color: #fff;
+    color: #fff!important;
+    background-color: #000!important;
 }
 a {
     text-decoration: none !important;

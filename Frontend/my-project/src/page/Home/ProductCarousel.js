@@ -51,10 +51,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product21.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product22.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -84,10 +84,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product27.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product28.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -112,10 +112,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product6.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product5.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -141,10 +141,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product7.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product8.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -174,10 +174,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product24.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product25.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -202,10 +202,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product10.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product11.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>
@@ -235,10 +235,10 @@ const ProductCarousel = () => {
                     <div className="product_thumb">
                         <a className="primary_img" href="product-details.html"><img src="/img/product/product23.jpg" alt="" /></a>
                         <a className="secondary_img" href="product-details.html"><img src="/img/product/product24.jpg" alt="" /></a>
-                        <div class="product_action">
-                            <div class="hover_action">
+                        <div className="product_action">
+                            <div className="hover_action">
                                 <a href="#"><FaPlus /></a>
-                                <div class="action_button">
+                                <div className="action_button">
                                     <ul>
                                         <li><a title="add to cart" href="cart.html"><IoCartOutline/></a></li>
                                         <li><a href="wishlist.html" title="Add to Wishlist"><IoHeart/></a></li>

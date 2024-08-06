@@ -63,11 +63,11 @@ function Contact() {
                 </div>
             </div>
 
-            <div classNameName="contact_map">
-                <div classNameName="container-fluid">
-                    <div classNameName="row">
-                        <div classNameName="col-12">
-                            <div classNameName="map-area">
+            <div className="contact_map">
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="map-area">
                                 <GoogleMapEmbed />
                             </div>
                         </div>
